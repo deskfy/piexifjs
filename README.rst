@@ -1,25 +1,10 @@
 Piexifjs
 ========
 
-.. image:: https://travis-ci.org/hMatoba/piexifjs.svg?branch=master
-    :target: https://travis-ci.org/hMatoba/piexifjs
-.. image:: https://badge.fury.io/js/piexifjs.svg
-    :target: http://badge.fury.io/js/piexifjs
+This is exactly the same as version 1.0.4 of hMatoba's piexifjs https://github.com/hMatoba/piexifjs, 
+but returning the input image itself when it is an unsupported type, instead of throwing an exception
 
-Read and modify exif. Library to modify exif in JS(both client-side and Node.js).
-http://piexifjs.readthedocs.org/en/latest/index.html
-
-Notice and Warning!
--------------------
-
-We are implementing v2.0. This version would include a few big changes. If you won't ready to use, don't update this library.
- 
-```
-npm install piexifjs@1.0.4
-```
- 
-Thank you for using piexifjs!
-
+Thanks to hMotoba for the hard work! 
 
 How to Use
 ----------

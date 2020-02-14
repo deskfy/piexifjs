@@ -35,7 +35,7 @@ SOFTWARE.
             jpeg = atob(jpeg.split(",")[1]);
             b64 = true;
         } else {
-            throw new Error("Given data is not jpeg.");
+            return jpeg;
         }
         
         var segments = splitIntoSegments(jpeg);
@@ -63,7 +63,7 @@ SOFTWARE.
             jpeg = atob(jpeg.split(",")[1]);
             b64 = true;
         } else {
-            throw new Error("Given data is not jpeg.");
+            return jpeg;
         }
 
         var exifStr = "\xff\xe1" + pack(">H", [exif.length + 2]) + exif;
