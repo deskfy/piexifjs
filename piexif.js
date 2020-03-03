@@ -950,11 +950,18 @@ SOFTWARE.
             segments.splice(segmentIndex, 1);
         });
 
+        var newSegments = segments.filter(function(seg){
+            console.log(seg.slice(4, 10))
+            return  ( !(seg.slice(0, 2) == "\xff\xe1") || 
+                       (seg.slice(4, 10) == "Exif\x00\x00"))
+                    && !(seg.slice(4, 10) ==  "MMIMET"); 
+        });
+
         if (!hasExifSegment && exif) {
-            segments = [segments[0], exif].concat(segments.slice(1));
+            newSegments = [newSegments[0], exif].concat(newSegments.slice(1));
         }
 
-        return segments.join("");
+        return newSegments.join("");
     }
 
 
